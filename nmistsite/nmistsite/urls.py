@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
+from mnist_identyty import mnist_api_view
+# from mnist_identyty import yourUrlName
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/mnist/', mnist_api_view.as_view())
+    # path('api/mnist/', yourUrlName)
 ]
